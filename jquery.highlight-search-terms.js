@@ -13,12 +13,12 @@
     var ref = document.referrer;
 
     if (ref) {
-      var words = $.fn.highlightSearchTerms.extractWordsFromReferrer(ref, o);
+      var terms = extractSearchTerms(ref, o);
 
-      // Highlight words
+      // Highlight terms
       this.find(":not(iframe)").contents().each(function () {
         if (this.nodeType === 3) {
-          var s = this.nodeValue.replace(words, "<em class=\"" + o.className + "\">$1</em>");
+          var s = this.nodeValue.replace(terms, "<em class=\"" + o.className + "\">$1</em>");
           $(this).replaceWith(s);
         }
       });
@@ -27,9 +27,9 @@
     return this;
   };
 
-  // Extract words from referrer
-  $.fn.highlightSearchTerms.extractWordsFromReferrer = function (ref, o) {
-    var words;
+  // Extract terms from referrer
+  extractSearchTerms = function (ref, o) {
+    var terms;
 
     $.each(o.referrerPatterns, function () {
       var pattern = new RegExp(this, "i");
@@ -37,12 +37,12 @@
       if (pattern.exec(ref)) {
         var unsafe = new RegExp(o.unsafeChars, "g");
         var query = decodeURIComponent(RegExp.$1).replace(unsafe, "+").replace(/^\+*(.*?)\+*$/, "$1").replace(/\++/g, "|");
-        words = new RegExp("(" + query + ")", "gi");
+        terms = new RegExp("(" + query + ")", "gi");
         return false; // break $.each
       }
     });
 
-    return words;
+    return terms;
   };
 
   $.fn.highlightSearchTerms.defaults = {
