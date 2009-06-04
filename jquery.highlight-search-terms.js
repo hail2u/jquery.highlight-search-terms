@@ -27,7 +27,7 @@
     return this;
   };
 
-  // Extract terms from referrer
+  // Private: Extract terms from referrer
   extractSearchTerms = function (ref, o) {
     var terms;
 
@@ -45,12 +45,14 @@
     return terms;
   };
 
+  // Public: default options
   $.fn.highlightSearchTerms.defaults = {
     className: "highlight",
     referrerPatterns: [],
     unsafeChars: "[!-*,-/:-@[-`{-~]"
   };
 
+  // Public: built-in referrer patterns for Google(com|co.jp), Yahoo!(com|co.jp), Bing.
   $.fn.highlightSearchTerms.builtinReferrerPatterns = [
     "^http://www\.google\.com.+[&?]q=([^&]+).*$",
     "^http://www\.google\.co\.jp.+[&?]q=([^&]+).*$",
