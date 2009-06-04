@@ -10,7 +10,7 @@
   $.fn.highlightSearchTerms = function (options) {
     var o = $.extend({}, $.fn.highlightSearchTerms.defaults, options);
     $.merge(o.referrerPatterns, $.fn.highlightSearchTerms.builtinReferrerPatterns);
-    var ref = document.referrer;
+    var ref = o.referrer || document.referrer;
 
     if (ref) {
       var terms = extractSearchTerms(ref, o);
