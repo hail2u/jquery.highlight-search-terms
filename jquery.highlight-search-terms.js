@@ -16,7 +16,7 @@
       var terms = extractSearchTerms(ref, o);
 
       // Highlight terms
-      this.find(":not(iframe)").contents().each(function () {
+      this.find(":not(iframe, script)").contents().each(function () {
         if (this.nodeType === 3) {
           var s = this.nodeValue.replace(terms, "<em class=\"" + o.className + "\">$1</em>");
           $(this).replaceWith(s);
