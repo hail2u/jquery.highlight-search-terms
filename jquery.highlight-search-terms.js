@@ -5,6 +5,20 @@
  * Copyright (c) 2009 Kyo Nagashima <kyo@hail2u.net>
  * This library licensed under MIT license:
  * http://opensource.org/licenses/mit-license.php
+ *
+ * Usage:
+ *   Highlight all contents of body element
+ *   $("body").highlightSearchTerms();
+ *
+ *   Highlight with custom class name
+ *   $("body").highlightSearchTerms({
+ *     className: "keyword"
+ *   });
+ *
+ *   Support custom referrer pattern
+ *   $("body").highlightSearchTerms({
+ *     referrerPatterns: "^http://example\.com.+[&?]query=([^&]+).*$"
+ *   });
  */
 (function($) {
   $.fn.highlightSearchTerms = function (options) {
