@@ -7,17 +7,19 @@
  * http://opensource.org/licenses/mit-license.php
  *
  * Usage:
- *   Highlight all contents of body element
+ *   Highlight all contents of body element:
  *   $("body").highlightSearchTerms();
  *
- *   Highlight with custom class name
+ *   Highlight with custom class name:
  *   $("body").highlightSearchTerms({
  *     className: "keyword"
  *   });
  *
- *   Support custom referrer pattern
+ *   Support custom referrer pattern:
  *   $("body").highlightSearchTerms({
- *     referrerPatterns: "^http://example\.com.+[&?]query=([^&]+).*$"
+ *     referrerPatterns: [
+ *       "^http://example\.com.+[&?]query=([^&]+).*$"
+ *     ]
  *   });
  */
 (function($) {
