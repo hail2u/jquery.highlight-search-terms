@@ -30,12 +30,15 @@
       var terms = extractSearchTerms(ref, o);
 
       // Highlight terms
-      this.find(":not(iframe, option, script, textarea)").contents().each(function () {
-        if (this.nodeType === 3) {
-          var s = this.nodeValue.replace(terms, "<em class=\"" + o.className + "\">$1</em>");
-          $(this).replaceWith(s);
-        }
-      });
+      if (terms !== "") {
+        terms = new RegExp("(" + terms + ")", "gi");
+        this.find(":not(iframe, option, script, textarea)").contents().each(function () {
+          if (this.nodeType === 3) {
+            var s = this.nodeValue.replace(terms, "<em class=\"" + o.className + "\">$1</em>");
+            $(this).replaceWith(s);
+          }
+        });
+      }
     }
 
     return this;
@@ -43,15 +46,14 @@
 
   // Private: Extract terms from referrer
   extractSearchTerms = function (ref, o) {
-    var terms;
+    var terms = "";
 
     $.each(o.referrerPatterns, function () {
       var pattern = new RegExp(this, "i");
 
       if (pattern.exec(ref)) {
         var unsafe = new RegExp(o.unsafeChars, "g");
-        var query = decodeURIComponent(RegExp.$1).replace(unsafe, "+").replace(/^\+*(.*?)\+*$/, "$1").replace(/\++/g, "|");
-        terms = new RegExp("(" + query + ")", "gi");
+        terms = decodeURIComponent(RegExp.$1).replace(unsafe, "+").replace(/^\+*(.*?)\+*$/, "$1").replace(/\++/g, "|");
         return false; // break $.each
       }
     });
