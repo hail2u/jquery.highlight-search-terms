@@ -12,19 +12,16 @@ Usage
 =====
 
 Highlight all contents of body element:
----------------------------------------
 
     $("body").highlightSearchTerms();
 
 Highlight with custom class name:
----------------------------------
 
     $("body").highlightSearchTerms({
       className: "keyword"
     });
 
 Support custom referrer pattern:
---------------------------------
 
     $("body").highlightSearchTerms({
       referrerPatterns: [
