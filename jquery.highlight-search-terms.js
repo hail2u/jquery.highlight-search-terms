@@ -1,5 +1,6 @@
 /*!
  * jQuery Plugin: Highlight Search Terms - version 0.1
+ * http://github.com/hail2u/jquery.highlight-search-terms
  * Highlight search terms in referrer URL from Google, Yahoo!, Bing and custom site.
  *
  * Copyright (c) 2009 Kyo Nagashima <kyo@hail2u.net>
