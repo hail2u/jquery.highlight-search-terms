@@ -1,7 +1,7 @@
 TITLE
 =====
 
-jQuery Plugin: Highlight Search Terms - version 0.1
+jQuery Plugin: Highlight Search Terms - version 0.2
 
 DESCRIPTION
 ===========
