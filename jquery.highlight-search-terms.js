@@ -19,10 +19,10 @@
       // Highlight terms
       if (terms !== "") {
         terms = new RegExp("(" + terms + ")", "gi");
+        var highlighted = "<em class=\"" + encodeEntities(o.className) + "\">$1</em>";
         this.find(":not(iframe, option, script, textarea)").contents().each(function () {
           if (this.nodeType === 3) {
-            var s = encodeEntities(this.nodeValue);
-            s = s.replace(terms, "<em class=\"" + encodeEntities(o.className) + "\">$1</em>");
+            var s = encodeEntities(this.nodeValue).replace(terms, highlighted);
             $(this).replaceWith(s);
           }
         });
