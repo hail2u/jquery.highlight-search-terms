@@ -21,7 +21,8 @@
         terms = new RegExp("(" + terms + ")", "gi");
         this.find(":not(iframe, option, script, textarea)").contents().each(function () {
           if (this.nodeType === 3) {
-            var s = this.nodeValue.replace(terms, "<em class=\"" + encodeEntities(o.className) + "\">$1</em>");
+            var s = encodeEntities(this.nodeValue);
+            s = s.replace(terms, "<em class=\"" + encodeEntities(o.className) + "\">$1</em>");
             $(this).replaceWith(s);
           }
         });
@@ -50,7 +51,7 @@
 
   // Private: Encode entities
   encodeEntities = function (s) {
-    return $("<span/>").text(s).html(); // jQuery magic
+    return $("<u/>").text(s).html(); // jQuery magic
   };
 
   // Public: default options
