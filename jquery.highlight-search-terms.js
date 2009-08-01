@@ -7,7 +7,7 @@
  * This library licensed under MIT license:
  * http://opensource.org/licenses/mit-license.php
  */
-(function($) {
+(function ($) {
   $.fn.highlightSearchTerms = function (options) {
     var o = $.extend({}, $.fn.highlightSearchTerms.defaults, options);
     $.merge(o.referrerPatterns, $.fn.highlightSearchTerms.builtinReferrerPatterns);
@@ -42,6 +42,7 @@
       if (pattern.exec(ref)) {
         var unsafe = new RegExp(o.unsafeChars, "g");
         terms = decodeURIComponent(RegExp.$1).replace(unsafe, "+").replace(/^\+*(.*?)\+*$/, "$1").replace(/\++/g, "|");
+
         return false; // break $.each
       }
     });
@@ -56,9 +57,9 @@
 
   // Public: default options
   $.fn.highlightSearchTerms.defaults = {
-    className: "highlight",
+    className:        "highlight",
     referrerPatterns: [],
-    unsafeChars: "[!-*,-/:-@[-`{-~]"
+    unsafeChars:      "[!-*,-/:-@[-`{-~]"
   };
 
   // Public: built-in referrer patterns for Google(com|co.jp), Yahoo!(com|co.jp), Bing.
