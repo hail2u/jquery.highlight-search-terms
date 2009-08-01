@@ -33,7 +33,7 @@
   };
 
   // Private: Extract terms from referrer
-  extractSearchTerms = function (ref, o) {
+  function extractSearchTerms (ref, o) {
     var terms = "";
 
     $.each(o.referrerPatterns, function () {
@@ -47,12 +47,12 @@
     });
 
     return terms;
-  };
+  }
 
   // Private: Encode entities
-  encodeEntities = function (s) {
+  function encodeEntities (s) {
     return $("<u/>").text(s).html(); // jQuery magic
-  };
+  }
 
   // Public: default options
   $.fn.highlightSearchTerms.defaults = {
