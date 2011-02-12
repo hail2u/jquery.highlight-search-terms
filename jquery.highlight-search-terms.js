@@ -19,7 +19,7 @@
       // Highlight terms
       if (terms !== "") {
         terms = new RegExp("(" + terms + ")", "gi");
-        var highlighted = "<em class=\"" + encodeEntities(o.className) + "\">$1</em>";
+        var highlighted = "<" + encodeEntities(o.tagName) + " class=\"" + encodeEntities(o.className) + "\">$1</em>";
         this.find(":not(iframe, option, script, textarea)").contents().each(function () {
           if (this.nodeType === 3) {
             var s = encodeEntities(this.nodeValue).replace(terms, highlighted);
@@ -57,6 +57,7 @@
 
   // Public: default options
   $.fn.highlightSearchTerms.defaults = {
+    tagName:          "em",
     className:        "highlight",
     referrerPatterns: [],
     unsafeChars:      "[!-*,-/:-@[-`{-~]"
