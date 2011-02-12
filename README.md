@@ -1,12 +1,14 @@
 TITLE
 =====
 
-jQuery Plugin: Highlight Search Terms - version 0.2
+jQuery Plugin: Highlight Search Terms - version 0.3
+
 
 DESCRIPTION
 ===========
 
 Highlight search terms in referrer URL from Google, Yahoo!, Bing and custom site.
+
 
 Usage
 =====
@@ -14,6 +16,12 @@ Usage
 Highlight all contents of body element:
 
     $("body").highlightSearchTerms();
+
+Highlight with custom tag name:
+
+    $("body").highlightSearchTerms({
+      tagName: "span"
+    });
 
 Highlight with custom class name:
 
@@ -29,9 +37,10 @@ Support custom referrer pattern:
       ]
     });
 
+
 LICENSE
 =======
 
-Copyright (c) 2009 Kyo Nagashima <kyo@hail2u.net><br />
-This library licensed under MIT license:<br />
-http://opensource.org/licenses/mit-license.php<br />
+Copyright (c) 2009 Kyo Nagashima <kyo@hail2u.net>  
+This library licensed under MIT license:  
+http://opensource.org/licenses/mit-license.php
