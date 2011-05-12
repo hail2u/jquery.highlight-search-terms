@@ -1,77 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset='utf-8'>
+  <head>
+    <meta charset="UTF-8">
 
-  <title>hail2u/jquery.highlight-search-terms @ GitHub</title>
+    <title>Test page for Highlight Search Terms</title>
 
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #0f00c5;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #ffffff;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #f0ff3a; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #f0ff3a; }
-    h3 { text-align: center; color: #f0ff3a; }
-    a { color: #f0ff3a; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
-</head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="https://github.com/hail2u/jquery.highlight-search-terms/raw/master/jquery.highlight-search-terms.js"></script>
+    <script>
+      $(function () {
+        $("body").highlightSearchTerms({
+          referrer: "http://www.google.com/search?q=lorem+ipsum+dolor+sit+amet"
+        });
+      });
+    </script>
 
-<body>
-  <a href="http://github.com/hail2u/jquery.highlight-search-terms"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+    <style type="text/css">
+      em.highlight {
+        color: #000;
+        background-color: #ff0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem ipsum dolor sit amet.</h1>
 
-  <div id="container">
+    <p>In sed sapien nunc, in gravida massa. Praesent sit amet arcu magna. Nullam porta hendrerit odio eu aliquam. Ut rhoncus semper turpis quis blandit. In ut purus quam. In in nunc massa, vitae fringilla odio. Integer molestie mauris eu nisi faucibus facilisis. Aenean ut eros leo. Phasellus vitae mi sed nunc porta volutpat. Morbi blandit, dolor sit amet pharetra imperdiet, nisi ligula tempus velit, quis vulputate nunc quam et purus. Vestibulum hendrerit diam et diam adipiscing dapibus. Ut ut justo nec mi fermentum viverra. Etiam pulvinar imperdiet est. Integer vitae nunc nulla. Suspendisse eu massa a libero accumsan interdum. Nullam quis felis tellus. Mauris in erat tortor, eu pellentesque lacus. Morbi pharetra adipiscing ipsum sit amet auctor. Nam aliquam vulputate eros, quis commodo risus consequat in.</p>
 
-    <div class="download">
-      <a href="http://github.com/hail2u/jquery.highlight-search-terms/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/hail2u/jquery.highlight-search-terms/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
-    </div>
+    <p>Cras ultricies ultricies justo a blandit. Quisque a tristique urna. Nam lobortis, metus a posuere ornare, arcu lacus sodales justo, non auctor felis nunc non nisi. Vestibulum risus dolor, ornare id lobortis pretium, rhoncus ac augue. Phasellus metus lectus, congue vitae tincidunt quis, venenatis in lorem. Sed bibendum, metus vel semper scelerisque, massa ante semper eros, ut malesuada felis odio eu elit. Nulla sodales risus sit amet magna pretium laoreet. Mauris nisi elit, faucibus ut molestie sit amet, rhoncus sit amet magna. Donec dapibus, libero eu rhoncus porttitor, neque sapien viverra risus, a tincidunt eros mauris nec ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse bibendum venenatis adipiscing. Nunc quis lectus turpis. Aliquam erat volutpat. Fusce porttitor, arcu eget rhoncus placerat, neque turpis sagittis sem, a consectetur orci massa id mauris. Etiam lacus ante, semper eu sagittis vel, fringilla ut velit. Integer tellus dolor, scelerisque et varius eu, accumsan non nisi.</p>
 
-    <h1><a href="http://github.com/hail2u/jquery.highlight-search-terms">jquery.highlight-search-terms</a>
-      <span class="small">by <a href="http://github.com/hail2u">hail2u</a></span></h1>
+    <p>Curabitur ut neque a augue sodales rhoncus. Vivamus eu lectus felis, vel interdum quam. Fusce et augue metus, et condimentum ipsum. Integer in lacus nibh, vitae feugiat odio. Quisque ut leo tortor, nec aliquet orci. Proin purus nisi, aliquam a tristique at, fringilla nec erat. Curabitur dapibus fringilla mollis. Sed justo mi, volutpat sit amet convallis non, mattis eget metus. Nunc dignissim interdum ligula in lacinia. Aliquam dignissim dolor risus, at faucibus mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent quam nisi, ultrices quis hendrerit in, sagittis ut orci. Suspendisse potenti. Maecenas auctor erat rhoncus lectus viverra ut dictum eros pharetra. Aliquam pharetra tempus risus, quis rutrum tellus faucibus non. Vestibulum ut nulla ante. Donec ut ligula enim, nec consectetur nisl. Etiam sem massa, tincidunt et mollis eget, lacinia quis mi. Duis porta, turpis vel tincidunt malesuada, dolor arcu fermentum magna, id sollicitudin lectus dolor eu lorem.</p>
+    <p>Fusce accumsan risus ut orci interdum sed vulputate mauris malesuada. Integer gravida orci et urna auctor dapibus. Sed vestibulum euismod sapien tincidunt condimentum. Vivamus gravida bibendum magna sit amet euismod. Integer sollicitudin convallis risus, ac egestas orci elementum at. Duis vel lorem in purus porttitor tempus in ac justo. Aliquam et posuere lectus. Maecenas lectus metus, suscipit eget eleifend quis, fermentum non felis. In nec dignissim ipsum. Sed imperdiet fringilla nisl, commodo facilisis massa convallis eget. Fusce eu nisi a dolor ullamcorper luctus. Sed accumsan fringilla feugiat. Nunc nec metus est. Morbi fermentum magna id orci vestibulum at adipiscing ante varius.</p>
 
-    <div class="description">
-      jQuery Plugin: Highlight Search Terms: Highlight search terms in referrer URL from Google, Yahoo!, Bing and custom site.
-    </div>
-
-    <h2>Authors</h2>
-<p>Kyo Nagashima (kyo@hail2u.net)<br/><br/>      </p>
-<h2>Contact</h2>
-<p>Kyo Nagashima (kyo@hail2u.net)<br/>      </p>
-
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/hail2u/jquery.highlight-search-terms/zipball/master">zip</a> or
-      <a href="http://github.com/hail2u/jquery.highlight-search-terms/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/hail2u/jquery.highlight-search-terms</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/hail2u/jquery.highlight-search-terms">hail2u/jquery.highlight-search-terms</a>
-    </div>
-
-  </div>
-
-  
-</body>
+    <p>Aliquam at sem a nunc pellentesque auctor sed luctus leo. Proin tristique ligula eget magna sodales sit amet adipiscing neque mattis. Vivamus elementum quam eu ante interdum et bibendum justo rhoncus. Donec lacinia tempor enim id lobortis. Nullam blandit vehicula leo, ut vehicula ante dictum et. Vestibulum a ullamcorper massa. Donec at dui tortor. Suspendisse placerat posuere viverra. In ultricies tincidunt nibh at pretium. Integer a tempor orci. Vestibulum in pulvinar felis. Aliquam facilisis aliquet nibh, vel lacinia tortor pretium eu. Nunc lobortis, ipsum sit amet sagittis adipiscing, metus eros fermentum lorem, eget interdum ante ligula non dolor. Proin mauris lorem, tristique id hendrerit sed, lacinia in lectus. Praesent id eleifend orci. Fusce sed augue elit. Sed sagittis venenatis tempor. Praesent dignissim, justo et fringilla congue, sem massa luctus ante, et pharetra dui nisi nec sem. Vestibulum nisi dui, tincidunt id luctus et, porta ut mauris. Quisque imperdiet condimentum sem et suscipit.</p>
+  </body>
 </html>
