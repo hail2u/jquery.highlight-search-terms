@@ -1,7 +1,7 @@
 TITLE
 =====
 
-jQuery Plugin: Highlight Search Terms - version 0.3
+jQuery Plugin: Highlight Search Terms - version 0.4
 
 
 DESCRIPTION
@@ -33,7 +33,7 @@ Support custom referrer pattern:
 
     $("body").highlightSearchTerms({
       referrerPatterns: [
-        "^http://example\.com.+[&?]query=([^&]+).*$"
+        "^http://example\\.com.+[&?]query=([^&]+).*$"
       ]
     });
 
@@ -41,6 +41,4 @@ Support custom referrer pattern:
 LICENSE
 =======
 
-Copyright (c) 2009 Kyo Nagashima <kyo@hail2u.net>  
-This library licensed under MIT license:  
-http://opensource.org/licenses/mit-license.php
+MIT: http://hail2u.mit-license.org/2009
