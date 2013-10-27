@@ -1,5 +1,5 @@
 /**
- * @preserve jQuery Plugin: Highlight Search Terms - version 0.4.1
+ * @preserve jQuery Plugin: Highlight Search Terms v0.4.2
  *
  * LICENSE: http://hail2u.mit-license.org/2009
  */
