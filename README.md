@@ -1,11 +1,5 @@
-TITLE
-=====
-
-jQuery Plugin: Highlight Search Terms - version 0.4
-
-
-DESCRIPTION
-===========
+jQuery Plugin: Highlight Search Terms v0.4.1
+============================================
 
 Highlight search terms in referrer URL from Google, Yahoo!, Bing and custom site.
 

@@ -1,0 +1,22 @@
+{
+  "name": "highlight-search-terms",
+  "version": "0.4.1",
+  "title": "Highlight Search Terms",
+  "author": {
+    "name": "Kyo Nagashima",
+    "url": "http://hail2u.net/"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://hail2u.mit-license.org/2009"
+    }
+  ],
+  "dependencies": {
+    "jquery": ">=1.5"
+  },
+  "description": "Highlight search terms in referrer URL from Google, Yahoo!, Bing and custom site.",
+  "homepage": "https://github.com/hail2u/jquery.highlight-search-terms",
+  "demo": "http://hail2u.github.io/jquery.highlight-search-terms/",
+  "bugs": "https://github.com/hail2u/jquery.highlight-search-terms/issues"
+}
